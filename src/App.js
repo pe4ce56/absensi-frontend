@@ -1,25 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom'
+import Login from './Components/Page/Auth/Login'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<Router>
+			<Switch>
+				<Route exact path="/" render={props => <h2>Home</h2>} />
+				<Route exact path="/login" render={props => <Login {...props} />} />
+			</Switch>
+		</Router>
+	)
+}
+
+const PrivateRoute = ({ render: Component, role, ...rest }) => {
+	let allow = true
+	// if (Array.isArray(role)) {
+	// 	role.forEach((item, i, arr) => {
+	// 		if (item === fakeAuth.role) allow = true
+	// 	})
+	// }
+
+	// if (role === fakeAuth.role) allow = true
+
+	return (
+		allow
+			? <Route {...rest} render={props => (
+				true
+					? <Component {...props} />
+					: <Redirect to={{
+						pathname: "/login",
+						state: { from: props.location }
+					}} />
+			)}
+			/>
+			: <h2>Access Denied</h2>
+	)
 }
 
 export default App;
