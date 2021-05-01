@@ -6,8 +6,10 @@ function App() {
 	return (
 		<Router>
 			<Switch>
-				<Route exact path="/" render={props => <h2>Home</h2>} />
+				<Route exact path="/" render={props => <h2>Home</h2>} /> {/* Rencananya kalo user belum login bakal di redirect ke /login kalo udah redirect ke /dashboard */}
+
 				<Route exact path="/login" render={props => <Login {...props} />} />
+				<Route exact path="/admin/login" render={props => <Login {...props} />} />
 			</Switch>
 		</Router>
 	)

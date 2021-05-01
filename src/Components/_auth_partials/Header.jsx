@@ -8,8 +8,8 @@ export default function Header(props) {
                 <div className="header-body text-center mb-7">
                     <div className="row justify-content-center">
                         <div className="col-xl-5 col-lg-6 col-md-8 px-5">
-                            <h1 className="text-white">Welcome!</h1>
-                            <p className="text-lead text-white">Use these awesome forms to login or create new account in your project for free.</p>
+                            <h1 className="text-white">Selamat Datang !</h1>
+                            <p className="text-lead text-white">Silahkan login untuk melanjutkan.</p>
                         </div>
                     </div>
                 </div>
