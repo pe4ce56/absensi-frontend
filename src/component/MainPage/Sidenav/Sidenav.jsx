@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Sidenav(props) {
 
@@ -17,10 +18,10 @@ export default function Sidenav(props) {
                         {/* Nav items */}
                         <ul className="navbar-nav">
                             <li className="nav-item">
-                                <a className="nav-link active" href="dashboard.html">
+                                <Link to="/dashboard" className="nav-link active">
                                     <i className="ni ni-tv-2 text-primary" />
                                     <span className="nav-link-text">Dashboard</span>
-                                </a>
+                                </Link>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link" href="icons.html">
@@ -35,10 +36,10 @@ export default function Sidenav(props) {
                                 </a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="profile.html">
+                                <Link to="/profile" className="nav-link">
                                     <i className="ni ni-single-02 text-yellow" />
                                     <span className="nav-link-text">Profile</span>
-                                </a>
+                                </Link>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link" href="tables.html">
