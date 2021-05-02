@@ -1,6 +1,6 @@
 import React from 'react'
 
-export function Sidenav(props) {
+export default function Sidenav(props) {
 
     return (
         <nav className="sidenav navbar navbar-vertical  fixed-left  navbar-expand-xs navbar-light bg-white" id="sidenav-main">

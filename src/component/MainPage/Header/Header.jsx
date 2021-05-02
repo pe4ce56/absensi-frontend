@@ -1,6 +1,6 @@
 import React from 'react'
 
-export function Header(props) {
+export default function Header(props) {
 
     return (
         <div className="header bg-primary pb-6">

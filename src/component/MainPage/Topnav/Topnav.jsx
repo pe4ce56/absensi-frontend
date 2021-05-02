@@ -1,6 +1,6 @@
 import React from 'react'
 
-export function Topnav(props) {
+export default function Topnav(props) {
 
     return (
         <nav className="navbar navbar-top navbar-expand navbar-dark bg-primary border-bottom">
