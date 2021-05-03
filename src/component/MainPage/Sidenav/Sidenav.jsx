@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Sidenav(props) {
 
@@ -7,7 +8,7 @@ export default function Sidenav(props) {
             <div className="scrollbar-inner">
                 {/* Brand */}
                 <div className="sidenav-header  align-items-center">
-                    <a className="navbar-brand" href="javascript:void(0)">
+                    <a className="navbar-brand" href="https://www.google.com">
                         <img src="../assets/img/brand/blue.png" className="navbar-brand-img" alt="..." />
                     </a>
                 </div>
@@ -17,10 +18,10 @@ export default function Sidenav(props) {
                         {/* Nav items */}
                         <ul className="navbar-nav">
                             <li className="nav-item">
-                                <a className="nav-link active" href="dashboard.html">
+                                <Link to="/dashboard" className="nav-link active">
                                     <i className="ni ni-tv-2 text-primary" />
                                     <span className="nav-link-text">Dashboard</span>
-                                </a>
+                                </Link>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link" href="icons.html">
@@ -35,10 +36,10 @@ export default function Sidenav(props) {
                                 </a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="profile.html">
+                                <Link to="/profile" className="nav-link">
                                     <i className="ni ni-single-02 text-yellow" />
                                     <span className="nav-link-text">Profile</span>
-                                </a>
+                                </Link>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link" href="tables.html">
@@ -74,25 +75,25 @@ export default function Sidenav(props) {
                         {/* Navigation */}
                         <ul className="navbar-nav mb-md-3">
                             <li className="nav-item">
-                                <a className="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/getting-started/overview.html" target="_blank">
+                                <a className="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/getting-started/overview.html" rel="noopener noreferrer" target="_blank">
                                     <i className="ni ni-spaceship" />
                                     <span className="nav-link-text">Getting started</span>
                                 </a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/foundation/colors.html" target="_blank">
+                                <a className="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/foundation/colors.html" rel="noopener noreferrer" target="_blank">
                                     <i className="ni ni-palette" />
                                     <span className="nav-link-text">Foundation</span>
                                 </a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/components/alerts.html" target="_blank">
+                                <a className="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/components/alerts.html" rel="noopener noreferrer" target="_blank">
                                     <i className="ni ni-ui-04" />
                                     <span className="nav-link-text">Components</span>
                                 </a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/plugins/charts.html" target="_blank">
+                                <a className="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/plugins/charts.html" rel="noopener noreferrer" target="_blank">
                                     <i className="ni ni-chart-pie-35" />
                                     <span className="nav-link-text">Plugins</span>
                                 </a>

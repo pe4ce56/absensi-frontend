@@ -1,15 +1,23 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import reportWebVitals from './reportWebVitals';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import reportWebVitals from './reportWebVitals'
 import axios from 'axios'
+import { createStore } from 'redux'
+import { Provider } from 'react-redux'
 import App from './container/App/App'
+import { rootReducer } from './redux/reducer/globalReducer'
 
 axios.defaults.headers.post['Accept'] = 'application/json'
 axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest'
 
+//Store
+const store = createStore(rootReducer)
+
 ReactDOM.render(
 	<React.StrictMode>
-		<App />
+		<Provider store={store}>
+			<App />
+		</Provider>
 	</React.StrictMode>,
 	document.getElementById('root')
 )
