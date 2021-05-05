@@ -27,6 +27,12 @@ export default class App extends Component {
                             <MainLayout {...props} render={Dashboard} />
                         )
                     }} />
+                    {/* 404 Page */}
+                    <Route exact path="*" render={props => {
+                        return (
+                            <Notfound {...props} />
+                        )
+                    }} />
                 </Switch>
             </Router>
         )
