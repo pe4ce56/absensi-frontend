@@ -1,16 +1,29 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-export default function Header(props) {
+export default function Header({ notFound }) {
 
     return (
         <div className="header bg-gradient-primary py-7 py-lg-8 pt-lg-9">
             <div className="container">
                 <div className="header-body text-center mb-7">
                     <div className="row justify-content-center">
-                        <div className="col-xl-5 col-lg-6 col-md-8 px-5">
-                            <h1 className="text-white">Selamat Datang !</h1>
-                            <p className="text-lead text-white">Silahkan login untuk melanjutkan.</p>
-                        </div>
+                        {!notFound
+                            ? (
+                                <div className="col-xl-5 col-lg-6 col-md-8 px-5">
+                                    <h1 className="text-white">Selamat Datang !</h1>
+                                    <p className="text-lead text-white">Silahkan login untuk melanjutkan.</p>
+                                </div>
+                            )
+                            : (
+                                <div className="col-xl-5 col-lg-6 col-md-8 px-5">
+                                    <h1 className="text-white">404 NOT FOUND!</h1>
+                                    <p className="text-lead text-white">Sepertinya Anda kehilangan arah!<br />
+                                        Kembali ke <Link to="/" className="text-white font-weight-bold">Dashboard.</Link>
+                                    </p>
+                                </div>
+                            )
+                        }
                     </div>
                 </div>
             </div>
