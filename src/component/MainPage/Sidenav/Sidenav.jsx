@@ -98,12 +98,6 @@ export default function Sidenav(props) {
                                     <span className="nav-link-text">Plugins</span>
                                 </a>
                             </li>
-                            <li className="nav-item">
-                                <a className="nav-link active active-pro" href="upgrade.html">
-                                    <i className="ni ni-send text-dark" />
-                                    <span className="nav-link-text">Upgrade to PRO</span>
-                                </a>
-                            </li>
                         </ul>
                     </div>
                 </div>
