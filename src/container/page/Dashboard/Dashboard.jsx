@@ -11,13 +11,6 @@ class Dashboard extends Component {
         return (
             <div className="row">
                 <div className="col-xl-8">
-                    <div className="form-group">
-                        <label>Username</label>
-                        <input type="text" className="form-control" value={this.props.store.username} onChange={e => this.props.dispatch.handeChangeUsername(e.target.value)} />
-                        <small id="helpId" className="form-text text-muted">{this.props.store.username}</small>
-                    </div>
-                </div>
-                <div className="col-xl-8">
                     <div className="card">
                         <div className="card-header border-0">
                             <div className="row align-items-center">

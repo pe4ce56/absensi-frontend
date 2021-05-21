@@ -1,21 +1,25 @@
 import ActionType from "./globalActionType"
 
 const globalState = {
-    username: 'ok',
-    password: 'ok'
+    layoutIsBlocked: false
 }
 
 //Reducer
-const rootReducer = (state = globalState, action) => {
+const globalReducer = (state = globalState, action) => {
     switch (action.type) {
-        case ActionType.CHANGE_USERNAME:
+        case ActionType.LAYOUT_BLOCK:
             return {
                 ...state,
-                username: action.username
+                layoutIsBlocked: true
+            }
+        case ActionType.LAYOUT_UNBLOCK:
+            return {
+                ...state,
+                layoutIsBlocked: false
             }
         default:
             return state
     }
 }
 
-export { rootReducer }
+export default globalReducer
