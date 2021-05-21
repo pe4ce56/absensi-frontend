@@ -24,15 +24,15 @@ export default function Sidenav(props) {
                                 </Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="icons.html">
-                                    <i className="ni ni-planet text-orange" />
-                                    <span className="nav-link-text">Icons</span>
-                                </a>
+                                <Link to="/dashboard" className="nav-link">
+                                    <i className="ni ni-books text-orange" />
+                                    <span className="nav-link-text">CRUD Siswa</span>
+                                </Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="map.html">
-                                    <i className="ni ni-pin-3 text-primary" />
-                                    <span className="nav-link-text">Google</span>
+                                <a className="nav-link" href="icons.html">
+                                    <i className="ni ni-books text-blue" />
+                                    <span className="nav-link-text">CRUD Petugas</span>
                                 </a>
                             </li>
                             <li className="nav-item">

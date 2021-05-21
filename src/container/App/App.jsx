@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-d
 import MainLayout from '../layout/MainLayout/MainLayout'
 import Dashboard from '../page/Dashboard/Dashboard'
 import Login from '../page/Login/Login'
+import Notfound from '../page/NotFound/NotFound'
+import ForBidden from '../page/ForBidden/ForBidden';
 
 export default class App extends Component {
     constructor(props) {
@@ -31,6 +33,12 @@ export default class App extends Component {
                     <Route exact path="*" render={props => {
                         return (
                             <Notfound {...props} />
+                        )
+                    }} />
+                    {/* 403 forbidden pg */}
+                    <Route exact path="403" render={props => {
+                        return (
+                            <ForBidden {...props} />
                         )
                     }} />
                 </Switch>
