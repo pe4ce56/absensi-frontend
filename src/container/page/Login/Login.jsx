@@ -4,7 +4,8 @@ import { Redirect } from 'react-router-dom'
 import axios from 'axios'
 import swal from 'sweetalert2'
 import BlockUi from 'react-block-ui'
-import 'react-block-ui/style.css'
+// import 'react-block-ui/style.css'
+import './BlockUI.css'
 import { API_URL } from '../../../config/config'
 import { Navbar, Header, Footer } from '../../../component/Auth/index'
 import LoginForm from './LoginForm/LoginForm'
@@ -17,7 +18,8 @@ class Login extends Component {
             username: '',
             password: '',
             redirectToDashboard: false,
-            toggleBlocking: false
+            toggleBlocking: false,
+            formError: null
         }
     }
 
@@ -49,6 +51,31 @@ class Login extends Component {
         })
     }
 
+    MyBlockUi = (props) => {
+        const { block, children: Component } = props
+        if (block) {
+            return (
+                <div className="block-ui-container">
+                    <div className="block-ui-overlay" />
+                    <div className="block-ui-message-container">
+                        <div className="block-ui-message">
+                            <div className="loading-indicator">
+                                <svg id="indicator" viewBox="0 0 100 100">
+                                    <circle id="circle" cx="50" cy="50" r="45" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            )
+        }
+
+        return (
+            <Component />
+        )
+    }
+
     loginSubmit = (e) => {
         const { from } = this.props.location.state || { from: { pathname: '/' } }
 
@@ -75,6 +102,14 @@ class Login extends Component {
                     }
                 })
             }
+        }).catch(({ response: { data: { code, lenght, message, status } } }) => {
+            if (code === 403 && lenght === 0 && !status) {
+                this.setState(prev => ({
+                    ...prev,
+                    toggleBlocking: false,
+                    formError: message
+                }))
+            }
         })
     }
 
@@ -88,11 +123,13 @@ class Login extends Component {
                         <div className="row justify-content-center">
                             <div className="col-lg-5 col-md-7">
                                 <div className="card bg-secondary border-0 mb-0">
+                                    {/* <this.MyBlockUi block={false}> */}
                                     <BlockUi tag="div" blocking={this.state.toggleBlocking}>
                                         <div className="card-body px-lg-5 py-lg-5">
                                             <LoginForm setLoginState={this.setLoginState} loginSubmit={this.loginSubmit} />
                                         </div>
                                     </BlockUi>
+                                    {/* </this.MyBlockUi> */}
                                 </div>
                             </div>
                         </div>
