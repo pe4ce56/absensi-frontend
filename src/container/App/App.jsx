@@ -7,6 +7,12 @@ import MainLayout from '../layout/MainLayout/MainLayout'
 import Dashboard from '../page/Dashboard/Dashboard'
 import Login from '../page/Login/Login'
 import Notfound from '../page/NotFound/NotFound'
+import ForBidden from '../page/ForBidden/ForBidden'
+import Guru from '../page/Guru/Guru'
+import Siswa from '../page/Siswa/Siswa'
+import Mapel from '../page/Mapel/Mapel'
+import Kelas from '../page/Kelas/Kelas'
+import Jadwal from '../page/Jadwal/Jadwal'
 
 class App extends Component {
     constructor(props) {
@@ -36,6 +42,42 @@ class App extends Component {
                             <MainLayout {...props} render={Dashboard} />
                         )
                     }} />
+
+                    {/* Route pg guru */}
+                    <PrivateRoute exact path="/guru" render={props => {
+                        return (
+                            <MainLayout {...props} render={Guru} />
+                        )
+                    }} />
+
+                    {/* Route pg siswa */}
+                    <PrivateRoute exact path="/siswa" render={props => {
+                        return (
+                            <MainLayout {...props} render={Siswa} />
+                        )
+                    }} />
+
+                    {/* Route pg mapel */}
+                    <PrivateRoute exact path="/mapel" render={props => {
+                        return (
+                            <MainLayout {...props} render={Mapel} />
+                        )
+                    }} />
+
+                    {/* Route pg kelas */}
+                    <PrivateRoute exact path="/kelas" render={props => {
+                        return (
+                            <MainLayout {...props} render={Kelas} />
+                        )
+                    }} />
+
+                    {/* Route pg jadwal */}
+                    <PrivateRoute exact path="/jadwal" render={props => {
+                        return (
+                            <MainLayout {...props} render={Jadwal} />
+                        )
+                    }} />
+
                     {/* <Route exact path="/dashboard" render={props => {
                     }} /> */}
 
@@ -45,6 +87,15 @@ class App extends Component {
                             <Notfound {...props} />
                         )
                     }} />
+                    {/* 403 forbidden pg */}
+                    <Route exact path="403" render={props => {
+                        return (
+                            <ForBidden {...props} />
+                        )
+                    }} />
+
+
+
                 </Switch>
             </Router>
         )

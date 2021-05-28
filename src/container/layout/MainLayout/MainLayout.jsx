@@ -14,11 +14,9 @@ function Mainlayout(props) {
                 <Sidenav />
                 <div className="main-content" id="panel">
                     <Topnav />
-                    <Header />
-                    <div className="container-fluid mt--6">
-                        <Children {...rest} />
-                        <Footer />
-                    </div>
+                    <Children {...rest} />
+
+                    <Footer />
                 </div>
             </BlockUi>
         </React.Fragment>

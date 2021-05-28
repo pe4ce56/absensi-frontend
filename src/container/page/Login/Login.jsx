@@ -56,6 +56,12 @@ class Login extends Component {
         axios.post(`${API_URL}/api/login`, {
             username: this.state.username,
             password: this.state.password
+        }, {
+            header: {
+                // "Content-Type": "application/json",
+                // setTimeout: 10000,
+                'X-Requested-With': 'XMLHttpRequest',
+            }
         }).then(({ data }) => {
             if (data.code === 200) {
                 localStorage.setItem('token', data.data.token)
@@ -75,6 +81,12 @@ class Login extends Component {
                     }
                 })
             }
+        }).catch(() => {
+            swal.fire({
+                title: "Login gagal",
+                text: "Check username/password",
+                icon: "error",
+            })
         })
     }
 

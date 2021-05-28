@@ -3,23 +3,12 @@ import React from 'react'
 export default function Header(props) {
 
     return (
-        <div className="header bg-primary pb-6">
+        <div className="header bg-primary pb-9">
             <div className="container-fluid">
                 <div className="header-body">
                     <div className="row align-items-center py-4">
-                        <div className="col-lg-6 col-7">
-                            <h6 className="h2 text-white d-inline-block mb-0">Default</h6>
-                            <nav aria-label="breadcrumb" className="d-none d-md-inline-block ml-md-4">
-                                <ol className="breadcrumb breadcrumb-links breadcrumb-dark">
-                                    <li className="breadcrumb-item"><a href="https://www.google.com"><i className="fas fa-home" /></a></li>
-                                    <li className="breadcrumb-item"><a href="https://www.google.com">Dashboards</a></li>
-                                    <li className="breadcrumb-item active" aria-current="page">Default</li>
-                                </ol>
-                            </nav>
-                        </div>
-                        <div className="col-lg-6 col-5 text-right">
-                            <a href="https://www.google.com" className="btn btn-sm btn-neutral">New</a>
-                            <a href="https://www.google.com" className="btn btn-sm btn-neutral">Filters</a>
+                        <div className="col-lg-6 col-5">
+                            <h1 className="text-white">Dashboard</h1>
                         </div>
                     </div>
                     {/* Card stats */}
@@ -30,12 +19,12 @@ export default function Header(props) {
                                 <div className="card-body">
                                     <div className="row">
                                         <div className="col">
-                                            <h5 className="card-title text-uppercase text-muted mb-0">Total traffic</h5>
+                                            <h5 className="card-title text-uppercase text-muted mb-0">Jumlah Guru</h5>
                                             <span className="h2 font-weight-bold mb-0">350,897</span>
                                         </div>
                                         <div className="col-auto">
                                             <div className="icon icon-shape bg-gradient-red text-white rounded-circle shadow">
-                                                <i className="ni ni-active-40" />
+                                                <i className="ni ni-single-02" />
                                             </div>
                                         </div>
                                     </div>
@@ -52,12 +41,12 @@ export default function Header(props) {
                                 <div className="card-body">
                                     <div className="row">
                                         <div className="col">
-                                            <h5 className="card-title text-uppercase text-muted mb-0">New users</h5>
+                                            <h5 className="card-title text-uppercase text-muted mb-0">Jumlah Mapel</h5>
                                             <span className="h2 font-weight-bold mb-0">2,356</span>
                                         </div>
                                         <div className="col-auto">
                                             <div className="icon icon-shape bg-gradient-orange text-white rounded-circle shadow">
-                                                <i className="ni ni-chart-pie-35" />
+                                                <i className="ni ni-single-copy-04" />
                                             </div>
                                         </div>
                                     </div>
@@ -74,7 +63,7 @@ export default function Header(props) {
                                 <div className="card-body">
                                     <div className="row">
                                         <div className="col">
-                                            <h5 className="card-title text-uppercase text-muted mb-0">Sales</h5>
+                                            <h5 className="card-title text-uppercase text-muted mb-0">Jumlah Kelas</h5>
                                             <span className="h2 font-weight-bold mb-0">924</span>
                                         </div>
                                         <div className="col-auto">
@@ -96,7 +85,7 @@ export default function Header(props) {
                                 <div className="card-body">
                                     <div className="row">
                                         <div className="col">
-                                            <h5 className="card-title text-uppercase text-muted mb-0">Performance</h5>
+                                            <h5 className="card-title text-uppercase text-muted mb-0">Total Siswa</h5>
                                             <span className="h2 font-weight-bold mb-0">49,65%</span>
                                         </div>
                                         <div className="col-auto">
