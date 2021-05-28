@@ -8,8 +8,8 @@ export default function Sidenav(props) {
             <div className="scrollbar-inner">
                 {/* Brand */}
                 <div className="sidenav-header  align-items-center">
-                    <a className="navbar-brand" href="https://www.google.com">
-                        <img src="../assets/img/brand/blue.png" className="navbar-brand-img" alt="..." />
+                    <a className="navbar-brand" href="/dashboard">
+                        <h2>Admin-Absensi</h2>
                     </a>
                 </div>
                 <div className="navbar-inner">
@@ -18,52 +18,40 @@ export default function Sidenav(props) {
                         {/* Nav items */}
                         <ul className="navbar-nav">
                             <li className="nav-item">
-                                <Link to="/dashboard" className="nav-link active">
+                                <Link to="/dashboard" className="nav-link ">
                                     <i className="ni ni-tv-2 text-primary" />
                                     <span className="nav-link-text">Dashboard</span>
                                 </Link>
                             </li>
                             <li className="nav-item">
-                                <Link to="/dashboard" className="nav-link">
-                                    <i className="ni ni-books text-orange" />
-                                    <span className="nav-link-text">CRUD Siswa</span>
+                                <Link to="/guru" className="nav-link">
+                                    <i className="ni ni-single-02 text-orange" />
+                                    <span className="nav-link-text">Guru</span>
                                 </Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="icons.html">
-                                    <i className="ni ni-books text-blue" />
-                                    <span className="nav-link-text">CRUD Petugas</span>
-                                </a>
-                            </li>
-                            <li className="nav-item">
-                                <Link to="/profile" className="nav-link">
-                                    <i className="ni ni-single-02 text-yellow" />
-                                    <span className="nav-link-text">Profile</span>
+                                <Link to="/siswa" className="nav-link">
+                                    <i className="ni ni-single-02 text-blue" />
+                                    <span className="nav-link-text">Siswa</span>
                                 </Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="tables.html">
+                                <Link to="/mapel" className="nav-link">
+                                    <i className="ni ni-single-copy-04 text-green" />
+                                    <span className="nav-link-text">Mapel</span>
+                                </Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link to="/kelas" className="nav-link">
+                                    <i className="ni ni-money-coins text-yellow" />
+                                    <span className="nav-link-text">Kelas</span>
+                                </Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link to="/jadwal" className="nav-link">
                                     <i className="ni ni-bullet-list-67 text-default" />
-                                    <span className="nav-link-text">Tables</span>
-                                </a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="login.html">
-                                    <i className="ni ni-key-25 text-info" />
-                                    <span className="nav-link-text">Login</span>
-                                </a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="register.html">
-                                    <i className="ni ni-circle-08 text-pink" />
-                                    <span className="nav-link-text">Register</span>
-                                </a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="upgrade.html">
-                                    <i className="ni ni-send text-dark" />
-                                    <span className="nav-link-text">Upgrade</span>
-                                </a>
+                                    <span className="nav-link-text">Jadwal</span>
+                                </Link>
                             </li>
                         </ul>
                         {/* Divider */}
@@ -96,12 +84,6 @@ export default function Sidenav(props) {
                                 <a className="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/plugins/charts.html" rel="noopener noreferrer" target="_blank">
                                     <i className="ni ni-chart-pie-35" />
                                     <span className="nav-link-text">Plugins</span>
-                                </a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link active active-pro" href="upgrade.html">
-                                    <i className="ni ni-send text-dark" />
-                                    <span className="nav-link-text">Upgrade to PRO</span>
                                 </a>
                             </li>
                         </ul>

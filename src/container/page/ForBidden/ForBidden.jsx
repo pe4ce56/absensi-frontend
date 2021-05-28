@@ -14,7 +14,7 @@ export default function Notfound(props) {
         <React.Fragment>
             <Navbar />
             <div className="main-content">
-                <Header forBidden />
+                <Header forBidden={true} />
             </div>
             <Footer />
         </React.Fragment>
