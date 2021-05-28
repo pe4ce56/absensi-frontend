@@ -7,26 +7,10 @@ export default function Footer(props) {
             <div className="row align-items-center justify-content-lg-between">
                 <div className="col-lg-6">
                     <div className="copyright text-center  text-lg-left  text-muted">
-                        © 2020 <a href="https://www.creative-tim.com" className="font-weight-bold ml-1" rel="noopener noreferrer" target="_blank">Creative
-            Tim</a>
+                         © <a href="https://www.schoolandcollegelistings.com/ID/Malang/193668737354797/SMKN-2-Singosari" className="font-weight-bold ml-1" rel="noopener noreferrer" target="_blank">SMKN 2 Singosari DEV Team</a>
                     </div>
                 </div>
-                <div className="col-lg-6">
-                    <ul className="nav nav-footer justify-content-center justify-content-lg-end">
-                        <li className="nav-item">
-                            <a href="https://www.creative-tim.com" className="nav-link" rel="noopener noreferrer" target="_blank">Creative Tim</a>
-                        </li>
-                        <li className="nav-item">
-                            <a href="https://www.creative-tim.com/presentation" className="nav-link" rel="noopener noreferrer" target="_blank">About Us</a>
-                        </li>
-                        <li className="nav-item">
-                            <a href="http://blog.creative-tim.com" className="nav-link" rel="noopener noreferrer" target="_blank">Blog</a>
-                        </li>
-                        <li className="nav-item">
-                            <a href="https://github.com/creativetimofficial/argon-dashboard/blob/master/LICENSE.md" className="nav-link" rel="noopener noreferrer" target="_blank">MIT License</a>
-                        </li>
-                    </ul>
-                </div>
+               
             </div>
         </footer>
     )

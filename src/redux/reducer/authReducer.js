@@ -16,9 +16,9 @@ const authReducer = (state = authState, action) => {
             }
         }
 
-        case ActionType.RESET_USERDATA: {
-            localStorage.removeItem('token')
-            localStorage.removeItem('user')
+            case ActionType.RESET_USERDATA: {
+                localStorage.removeItem('token')
+                localStorage.removeItem('user')
             return {
                 isAuthenticated: false,
                 token: null,

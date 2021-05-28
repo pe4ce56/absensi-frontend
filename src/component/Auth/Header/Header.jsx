@@ -1,8 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-export default function Header({ notFound }) {
-
+export default function Header({ notFound = false,forBidden = false }) {
     return (
         <div className="header bg-gradient-primary py-7 py-lg-8 pt-lg-9">
             <div className="container">
@@ -16,11 +15,26 @@ export default function Header({ notFound }) {
                                 </div>
                             )
                             : (
-                                <div className="col-xl-5 col-lg-6 col-md-8 px-5">
-                                    <h1 className="text-white">404 NOT FOUND!</h1>
-                                    <p className="text-lead text-white">Sepertinya Anda kehilangan arah!<br />
-                                        Kembali ke <Link to="/" className="text-white font-weight-bold">Dashboard.</Link>
-                                    </p>
+                                <div className="container mt-3">
+                                    <img width="500px" src="../assets/img/page/404.png" />
+                                    <div>
+                                        <h1 className="text-white">Oops, Sepertinya halaman yang anda cari tidak ditemukan</h1>
+                                        <p className="text-lead text-white">Kembali ke
+                                            <Link to="/" className="text-white font-weight-bold"> Dashboard</Link>
+                                        </p>
+                                    </div>
+                                </div>
+                            )
+                        }
+                        {forBidden &&  (
+                                <div className="container mt-3">
+                                    <img width="500px" src="../assets/img/page/404.png" />
+                                    <div>
+                                        <h1 className="text-white">Oops, Sepertinya halaman yang anda cari tidak ditemukan</h1>
+                                        <p className="text-lead text-white">Kembali ke
+                                            <Link to="/" className="text-white font-weight-bold"> Dashboard</Link>
+                                        </p>
+                                    </div>
                                 </div>
                             )
                         }
